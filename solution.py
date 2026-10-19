@@ -1,4 +1,8 @@
 def main():
+  f = open('in.txt', 'r')
+  data = f.read().split()
+  f.close()
+  
   n = int(data[0])
 
     A = []
