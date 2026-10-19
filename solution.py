@@ -56,4 +56,16 @@ def main():
         neighbors[a].append(b)
         neighbors[b].append(a)
         total += A[a][b]
+
+    f = open('out.txt', 'w')
+    for i in range(n):
+        List = sorted(neighbors[i])
+        s = ''
+        for x in List:
+            s += str(x + 1) + ' '
+        s += '0'
+        f.write(s + '\n')
+
+    f.write(str(total))
+    f.close()
 main()
