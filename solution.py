@@ -1,17 +1,17 @@
 def main():
-  f = open('in.txt', 'r')
-  data = f.read().split()
-  f.close()
+  file = open('in.txt', 'r')
+  data = file.read().split()
+  file.close()
   
   n = int(data[0])
 
     A = []
-    pos = 1
+    position = 1
     for i in range(n):
         row = []
         for j in range(n):
-            row.append(int(data[pos]))
-            pos += 1
+            row.append(int(data[position]))
+            position += 1
         A.append(row)
 
     w = 0 #произвольная вершина из V
@@ -61,15 +61,15 @@ def main():
         neighbors[b].append(a)
         total += A[a][b]
 
-    f = open('out.txt', 'w')
+    file = open('out.txt', 'w')
     for i in range(n):
         List = sorted(neighbors[i])
         s = ''
         for x in List:
             s += str(x + 1) + ' '
         s += '0'
-        f.write(s + '\n')
+        file.write(s + '\n')
 
-    f.write(str(total))
-    f.close()
+    file.write(str(total))
+    file.close()
 main()
