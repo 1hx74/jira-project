@@ -1,9 +1,9 @@
 def main():
-  file = open('in.txt', 'r')
-  data = file.read().split()
-  file.close()
+    file = open('in.txt', 'r')
+    data = file.read().split()
+    file.close()
   
-  n = int(data[0])
+    n = int(data[0])
 
     A = []
     position = 1
